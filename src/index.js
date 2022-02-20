@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Welcome from './Welcome';
 import reportWebVitals from './reportWebVitals';
+
+const title = process.env.REACT_APP_TITLE;
+const footer_desc = process.env.REACT_APP_FOOTER;
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Welcome title={title} footer_desc={footer_desc} />
   </React.StrictMode>,
   document.getElementById('root')
 );
